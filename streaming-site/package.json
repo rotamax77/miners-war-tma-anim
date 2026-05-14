@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^1.16.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+    "start": "concurrently \"node backend/server.js\" \"node updater/scraper.js\" \"npx serve frontend -p 8080\""
+  }
+}
