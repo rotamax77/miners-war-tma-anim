@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamLibre - Films, Séries et Animes Libres de Droit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>StreamLibre</h1>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#" data-type="">Tous</a></li>
+                <li><a href="#" data-type="film">Films</a></li>
+                <li><a href="#" data-type="serie">Séries</a></li>
+                <li><a href="#" data-type="anime">Dessins Animés</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="filters">
+            <h3>Filtres</h3>
+            <div class="filter-group">
+                <label for="genre-select">Genre :</label>
+                <select id="genre-select">
+                    <option value="">Tous les genres</option>
+                    <option value="Sci-Fi">Science-Fiction</option>
+                    <option value="Horreur">Horreur</option>
+                    <option value="Comédie">Comédie</option>
+                    <option value="Drama">Drame</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Divers">Divers</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="language-select">Langue :</label>
+                <select id="language-select">
+                    <option value="">Toutes les langues</option>
+                    <option value="VF">VF</option>
+                    <option value="VOSTFR">VOSTFR</option>
+                    <option value="VO">VO</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="content">
+            <div id="video-player-container" class="hidden">
+                <button id="close-player">✖ Fermer</button>
+                <h2 id="player-title"></h2>
+                <video id="video-player" controls>
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <p id="player-desc"></p>
+            </div>
+
+            <div id="videos-grid" class="grid">
+                <!-- Les vidéos seront injectées ici par JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
